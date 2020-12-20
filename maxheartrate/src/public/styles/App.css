@@ -1,0 +1,19 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(100, 216, 255);
+  color: rgb(70, 70, 70);
+  position: relative;
+}
+
+.App {
+  text-align: center;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: rgb(209, 209, 209);
+}

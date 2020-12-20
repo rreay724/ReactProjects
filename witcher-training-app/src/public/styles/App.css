@@ -1,0 +1,23 @@
+.mainBody {
+  font-family: "Dosis", sans-serif;
+  background: url("../img/withcher3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: rgb(70, 70, 70);
+  position: relative;
+}
+
+.App {
+  text-align: center;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: rgb(209, 209, 209);
+}

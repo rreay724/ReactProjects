@@ -1,0 +1,181 @@
+body {
+  font-family: "Dosis", sans-serif;
+  background-color: rgb(100, 216, 255);
+  background: url("../img/witcherMeditate.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: rgb(70, 70, 70);
+  position: relative;
+}
+
+.App {
+  text-align: center;
+}
+
+/* .container {
+  margin: 100px auto;
+
+  border: 1px solid black;
+  background-color: rgb(37, 37, 37, 0.8);
+  border-radius: 25px;
+  width: 40%;
+  justify-content: center;
+  color: white;
+  padding: 20px 0;
+} */
+
+.container {
+  padding: 45px;
+  background-color: rgb(37, 37, 37, 0.8);
+
+  margin: auto;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(123, 100, 255),
+    inset -20px 0 80px #0ff, inset 20px 0 300px rgb(123, 100, 255),
+    inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px rgb(123, 100, 255),
+    10px 0 80px #0ff;
+  color: white;
+}
+
+.ageInput {
+  height: 18px;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.info {
+  margin-top: 50px;
+  padding: 0;
+}
+
+.zones {
+  text-align: center;
+  box-sizing: border-box;
+  width: 50%;
+  border: 1px gray solid;
+  border-radius: 10px;
+  height: 30px;
+  margin: 10px auto;
+  padding-top: 4px;
+  color: rgb(70, 70, 70);
+}
+
+.warmup {
+  background-color: lightgreen;
+  box-shadow: inset 0 0 50px lightgreen, inset 20px 0 80px lightgreen,
+    inset -20px 0 80px lightgreen, inset 20px 0 300px lightgreen,
+    inset -20px 0 300px lightgreen, 0 0 50px lightgreen, -10px 0 80px lightgreen,
+    10px 0 80px lightgreen;
+}
+
+.fatBurn {
+  background-color: yellow;
+  box-shadow: inset 0 0 50px yellow, inset 20px 0 80px yellow,
+    inset -20px 0 80px yellow, inset 20px 0 300px yellow,
+    inset -20px 0 300px yellow, 0 0 50px yellow, -10px 0 80px yellow,
+    10px 0 80px yellow;
+}
+
+.cardio {
+  background-color: orange;
+  box-shadow: inset 0 0 50px orange, inset 20px 0 80px orange,
+    inset -20px 0 80px orange, inset 20px 0 300px orange,
+    inset -20px 0 300px orange, 0 0 50px orange, -10px 0 80px orange,
+    10px 0 80px orange;
+}
+
+.peak {
+  background-color: red;
+  box-shadow: inset 0 0 50px red, inset 20px 0 80px red, inset -20px 0 80px red,
+    inset 20px 0 300px red, inset -20px 0 300px red, 0 0 50px red,
+    -10px 0 80px red, 10px 0 80px red;
+}
+
+button {
+  margin: 5px;
+  /* font-family: "Montserrat"; */
+  /* font-size: 20px; */
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 0px solid #000;
+}
+
+/* Initiate Auto-Pulse animations */
+button.pulse-button {
+  animation: borderPulse 1000ms infinite ease-out,
+    colorShift 10000ms infinite ease-in;
+}
+
+/* Initiate color change for pulse-on-hover */
+button.pulse-button-hover {
+  animation: colorShift 10000ms infinite ease-in;
+}
+
+/* Continue animation and add shine on hover */
+button:hover,
+button:focus {
+  animation: borderPulse 1000ms infinite ease-out,
+    colorShift 10000ms infinite ease-in, hoverShine 200ms;
+}
+
+/* Declate color shifting animation */
+@keyframes colorShift {
+  0%,
+  100% {
+    background: #0045e6;
+  }
+  33% {
+    background: #fb3e3e;
+  }
+  66% {
+    background: #0dcc00;
+  }
+}
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+      0px 0px 0px 0px rgba(255, 255, 255, 1);
+  }
+  100% {
+    box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255, 0.2),
+      0px 0px 0px 10px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Declare shine on hover animation */
+@keyframes hoverShine {
+  0% {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+  }
+}
