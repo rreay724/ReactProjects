@@ -2,9 +2,10 @@ import "./app.css";
 import React from "react";
 import { Header, Sidebar, Feed, Widgets } from "./components/index";
 import Login from "./pages/Login/Login";
+import { useStateValue } from "./utils/StateProvider";
 
 function App() {
-  const user = null;
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="app">
       {!user ? (
