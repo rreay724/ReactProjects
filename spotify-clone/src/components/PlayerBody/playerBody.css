@@ -1,8 +1,0 @@
-.body {
-  /* will use 80% of space available */
-  flex: 0.8;
-  background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
-  height: 100vh;
-  color: white;
-  padding: 30px;
-}

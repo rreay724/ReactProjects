@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar, PlayerBody, Footer } from "../index";
+import { Sidebar, Body, Footer } from "../index";
 import "./player.css";
 
 function Player({ spotify }) {
@@ -7,12 +7,9 @@ function Player({ spotify }) {
     <div className="player">
       <div className="playerBody">
         <Sidebar />
-        <PlayerBody />
-        {/* Sidebar */}
-        {/* Body */}
+        <Body spotify={spotify} />
       </div>
-      <Footer />
-      {/* Footer */}
+      <Footer spotify={spotify} />
     </div>
   );
 }
