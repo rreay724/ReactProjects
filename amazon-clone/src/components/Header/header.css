@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerLogo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.headerSearch {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.headerSearchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.headerSearchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.headerOption {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+
+.headerOptionLineOne {
+  font-size: 12px;
+}
+.headerOptionLineTwo {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.headerOptionCart {
+  display: flexbox;
+  align-items: center;
+  color: white;
+}
+
+.headerCartCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
