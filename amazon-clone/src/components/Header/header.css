@@ -1,18 +1,28 @@
 .header {
   display: flex;
   height: 60px;
+  padding-bottom: 3px;
   align-items: center;
   background-color: #131921;
   position: sticky;
   top: 0;
   z-index: 100;
+  padding-right: 10px;
 }
 
 .headerLogo {
   width: 100px;
   object-fit: contain;
   margin: 0 20px;
-  margin-top: 18px;
+  margin-top: 10px;
+  border: 1.5px solid transparent;
+  padding: 5px;
+  padding-bottom: 0;
+  padding-top: 10px;
+}
+
+.headerLogo:hover {
+  border: 1.5px solid white;
 }
 
 .headerSearch {
@@ -50,6 +60,13 @@
   color: white;
   text-align: left;
   font-family: "Roboto", sans-serif;
+  padding: 4px;
+  border: 1.5px solid transparent;
+}
+
+.headerOption:hover {
+  border: 1.5px solid white;
+  cursor: pointer;
 }
 
 .headerOptionLineOne {
@@ -64,6 +81,12 @@
   display: flexbox;
   align-items: center;
   color: white;
+  padding: 7px;
+  border: 1.5px solid transparent;
+}
+
+.headerOptionCart:hover {
+  border: 1.5px solid white;
 }
 
 .headerCartCount {
