@@ -1,5 +1,5 @@
 .footer {
-  height: 650px;
+  height: 750px;
   background-color: #232f3e;
   color: white;
   width: 100%;
@@ -13,12 +13,16 @@
   padding-top: 30px;
   font-weight: 600;
   font-size: 18px;
+  cursor: pointer;
+}
+
+.footerBackToTop:hover {
+  background-color: #435a76;
 }
 
 .footerColumnGroup {
   display: flex;
   margin: auto;
-  align-items: center;
   margin-left: 70px;
   margin-right: 70px;
 }
@@ -34,6 +38,11 @@
 
 .footerColumn > p {
   font-size: 20px;
+  cursor: pointer;
+}
+
+.footerColumn > p:hover {
+  text-decoration: underline;
 }
 
 .footerLogo {
@@ -51,7 +60,7 @@
   border-top: 1px solid #3a4553;
   align-items: center;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 40px;
   display: flex;
 }
 
