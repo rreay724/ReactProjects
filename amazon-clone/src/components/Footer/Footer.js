@@ -11,8 +11,8 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <div className="footerBackToTop">
-        <a onClick={scrollToTop}>Back to top</a>
+      <div onClick={scrollToTop} className="footerBackToTop">
+        <p>Back to top</p>
       </div>
       <div className="footerColumnGroup">
         <div className="footerColumn">
@@ -68,8 +68,8 @@ function Footer() {
             />
           </Link>
           <div className="footerItems">
-            <p className="footerItem">English</p>
-            <p className="footerItem">United States</p>
+            <p className="footerItem">🌐 &nbsp;&nbsp;English</p>
+            <p className="footerItem">🇺🇸 &nbsp;United States</p>
           </div>
         </div>
       </div>
