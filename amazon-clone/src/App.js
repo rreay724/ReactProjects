@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import { Header, Home, Checkout, Login } from "./components/index";
+import { Header, Home, Checkout, Login, Footer } from "./components/index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./contexts/StateProvider";
@@ -32,10 +32,12 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+            <Footer />
           </Route>
           <Route path="/">
             <Header />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>

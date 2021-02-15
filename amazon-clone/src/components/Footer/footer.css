@@ -1,0 +1,84 @@
+.footer {
+  height: 650px;
+  background-color: #232f3e;
+  color: white;
+  width: 100%;
+}
+
+.footerBackToTop {
+  height: 50px;
+  background-color: #374a61;
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.footerColumnGroup {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.footerColumn {
+  line-height: 38px;
+  margin: 60px auto;
+}
+.footerColumn > h3 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.footerColumn > p {
+  font-size: 20px;
+}
+
+.footerLogo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 10px;
+  border: 1.5px solid transparent;
+  padding: 5px;
+  padding-bottom: 0;
+  padding-top: 10px;
+}
+
+.footerBottom {
+  border-top: 1px solid #3a4553;
+  align-items: center;
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+}
+
+.footerBottomGroup {
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+.footerItems {
+  display: flex;
+  margin-left: 130px;
+}
+
+.footerItem {
+  border: 1px solid #dddddd;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #dddddd;
+  margin-right: 15px;
+}
+
+.footerItem:hover {
+  cursor: pointer;
+}

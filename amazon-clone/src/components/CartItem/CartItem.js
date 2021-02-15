@@ -1,6 +1,7 @@
 import React from "react";
 import "./cartItem.css";
 import { useStateValue } from "../../contexts/StateProvider";
+import FlipMove from "react-flip-move";
 
 function CartItem({ id, title, image, price, rating }) {
   const [{ cart }, dispatch] = useStateValue();

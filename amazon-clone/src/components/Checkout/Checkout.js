@@ -2,6 +2,7 @@ import React from "react";
 import { Subtotal, CartItem } from "../index";
 import "./checkout.css";
 import { useStateValue } from "../../contexts/StateProvider";
+import FlipMove from "react-flip-move";
 
 function Checkout() {
   const [{ cart, user }, dispatch] = useStateValue();
