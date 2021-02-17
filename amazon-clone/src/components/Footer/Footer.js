@@ -12,7 +12,9 @@ function Footer() {
   return (
     <footer className="footer">
       <div onClick={scrollToTop} className="footerBackToTop">
-        <p>Back to top</p>
+        <div>
+          <span>Back to top</span>
+        </div>
       </div>
       <div className="footerColumnGroup">
         <div className="footerColumn">

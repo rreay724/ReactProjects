@@ -93,3 +93,25 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.headerDeliverUser {
+  color: #cccccc;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.headerLocation {
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.headerDeliverTo {
+  display: flex;
+  padding: 20px;
+}
+
+.headerLocationIcon {
+  color: white;
+  padding-top: 8px;
+}

@@ -3,6 +3,7 @@ import FlipMove from "react-flip-move";
 export const initialState = {
   cart: [],
   user: null,
+  location: "",
 };
 
 export const getCartTotal = (cart) =>
@@ -15,6 +16,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: [...state.cart, action.item],
+      };
+
+    case "SET_LOCATION":
+      return {
+        ...state,
+        location: action.location,
       };
 
     case "SET_USER":

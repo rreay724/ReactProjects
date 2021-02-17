@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { useStateValue } from "../../contexts/StateProvider";
+import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import { auth } from "../../firebase";
 
 function Header() {
   const [{ cart, user }, dispatch] = useStateValue();
-  // let name = user.email.split("@");
 
   const handleAuthentication = () => {
     if (user) {
@@ -24,6 +24,18 @@ function Header() {
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
         />
       </Link>
+      {user ? (
+        <div className="headerDeliverTo">
+          <LocationOnOutlinedIcon className="headerLocationIcon" />
+          <div>
+            <p className="headerDeliverUser">
+              Deliver to {user?.email.split("@")[0]}
+            </p>
+            <h3 className="headerLocation">Ashburn 20147</h3>
+          </div>
+        </div>
+      ) : null}
+
       <div className="headerSearch">
         <input className="headerSearchInput" type="text" />
         <SearchIcon className="headerSearchIcon" />
@@ -33,7 +45,7 @@ function Header() {
         <Link to={!user && "/login"} style={{ textDecoration: "none" }}>
           <div onClick={handleAuthentication} className="headerOption">
             <span className="headerOptionLineOne">
-              Hello, {user ? user.email.split("@")[0] : "Guest"}
+              Hello, {user ? user?.email.split("@")[0] : "Guest"}
             </span>
             <span className="headerOptionLineTwo">
               {user ? "Sign Out" : "Sign In"}
