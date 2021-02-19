@@ -18,12 +18,6 @@ const reducer = (state, action) => {
         cart: [...state.cart, action.item],
       };
 
-    case "SET_LOCATION":
-      return {
-        ...state,
-        location: action.location,
-      };
-
     case "SET_USER":
       return {
         ...state,
