@@ -37,6 +37,7 @@ function Footer() {
           <p>Host an Amazon Hub</p>
           <p>›See More Make Money with Us</p>
         </div>
+
         <div className="footerColumn">
           <h3>Amazon Payment Products</h3>
           <p>Amazon Rewards Visa Signature Cards</p>
@@ -48,6 +49,7 @@ function Footer() {
           <p>Reload Your Balance</p>
           <p>Amazon Currency Converter</p>
         </div>
+
         <div className="footerColumn">
           <h3>Let Us Help You</h3>
           <p>Amazon and COVID-19</p>

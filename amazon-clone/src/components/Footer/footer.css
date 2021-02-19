@@ -29,20 +29,22 @@
 }
 
 .footerColumn {
-  line-height: 30px;
-  min-width: 230px;
+  line-height: 20px;
+  max-width: 250px;
   margin: 50px auto;
 }
 .footerColumn > h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
 }
 
 .footerColumn > p {
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   color: #dddddd;
   font-weight: 600;
+  max-width: 200px;
+  padding-top: 8px;
 }
 
 .footerColumn > p:hover {
