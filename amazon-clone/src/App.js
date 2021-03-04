@@ -11,6 +11,12 @@ import {
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./contexts/StateProvider";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51IME36JQXHk9VuQmmtM3awuGkqcvq90HRL9nPR7Ih8G0aalQBX6FEqw4LqvO7Ryqnqu5KvM8SjBE3d2VchykKdCQ00oLsgC2An"
+);
 
 // When using switch, make sure default route is at bottom or it won't get listened to
 function App() {
@@ -44,7 +50,9 @@ function App() {
             </Route>
             <Route path="/payment">
               <Header />
-              <Payment />
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
               <Footer />
             </Route>
             <Route path="/">
