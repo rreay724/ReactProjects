@@ -23,3 +23,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/Users/bobbyreay/Projects/ReactProjects/amazon-clone/functions/firebase-debug.log
