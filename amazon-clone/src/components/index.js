@@ -7,3 +7,5 @@ export { default as CartItem } from "./CartItem/CartItem";
 export { default as Login } from "./Login/Login";
 export { default as Footer } from "./Footer/Footer";
 export { default as Payment } from "./Payment/Payment";
+export { default as Orders } from "./Orders/Orders";
+export { default as Order } from "./Order/Order";

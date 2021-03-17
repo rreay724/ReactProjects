@@ -52,11 +52,12 @@ function Header() {
             </span>
           </div>
         </Link>
-
-        <div className="headerOption">
-          <span className="headerOptionLineOne">Returns</span>
-          <span className="headerOptionLineTwo">& Orders</span>
-        </div>
+        <Link to="/orders" style={{ textDecoration: "none" }}>
+          <div className="headerOption">
+            <span className="headerOptionLineOne">Returns</span>
+            <span className="headerOptionLineTwo">& Orders</span>
+          </div>
+        </Link>
         <div className="headerOption">
           <span className="headerOptionLineOne">Your</span>
           <span className="headerOptionLineTwo">Prime</span>

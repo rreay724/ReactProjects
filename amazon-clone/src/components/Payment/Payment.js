@@ -6,6 +6,7 @@ import CurrencyFormat from "react-currency-format";
 import axios from "../../utils/axios";
 import { CartItem } from "../index";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { db } from "../../firebase";
 import "./payment.css";
 
 function Payment() {
@@ -49,9 +50,24 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         //  paymentIntent = payment confirmation
+        // using nosql datastructure
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            cart: cart,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_CART",
+        });
 
         history.replace("/orders");
       });
@@ -117,7 +133,7 @@ function Payment() {
                   prefix={"$"}
                 />
                 <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : "But Now"}</span>
+                  <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
               {error && <div>{error}</div>}

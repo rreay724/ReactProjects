@@ -24,6 +24,12 @@ const reducer = (state, action) => {
         user: action.user,
       };
 
+    case "EMPTY_CART":
+      return {
+        ...state,
+        cart: [],
+      };
+
     case "REMOVE_FROM_CART":
       const index = state.cart.findIndex(
         (cartItem) => cartItem.id === action.id

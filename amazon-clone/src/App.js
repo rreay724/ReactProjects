@@ -7,6 +7,7 @@ import {
   Login,
   Footer,
   Payment,
+  Orders,
 } from "./components/index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
@@ -42,6 +43,11 @@ function App() {
           <Switch>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/orders">
+              <Header />
+              <Orders />
+              <Footer />
             </Route>
             <Route path="/checkout">
               <Header />
