@@ -41,7 +41,6 @@ function Header() {
         <SearchIcon className="headerSearchIcon" />
       </div>
       <div className="headerNav">
-        {/* if no user, then go to login page */}
         <Link to={!user && "/login"} style={{ textDecoration: "none" }}>
           <div onClick={handleAuthentication} className="headerOption">
             <span className="headerOptionLineOne">

@@ -16,6 +16,7 @@ function Home() {
           {itemLine1.map((item) => {
             return (
               <Product
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}
@@ -29,6 +30,7 @@ function Home() {
           {itemLine2.map((item) => {
             return (
               <Product
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}
@@ -42,6 +44,7 @@ function Home() {
           {itemLine3.map((item) => {
             return (
               <Product
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}
