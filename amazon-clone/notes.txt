@@ -4,3 +4,5 @@ When filling out test card just keep pressing 42 for everything
 For creating function folder: firebase init and selected functions, javascript. Functions folder is full back end.
 
 Deploying Functions: go into functions folder and type firebase deploy --only functions
+
+Deploying front end: firebase deploy --only hosting
