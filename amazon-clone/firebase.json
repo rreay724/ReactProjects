@@ -12,5 +12,10 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "functions":{
+    "predeploy":[
+      "npm --prefix \"$RESOUCE_DIR\" run lint"
+    ]
   }
 }
