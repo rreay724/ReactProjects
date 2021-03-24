@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Header, Sidebar } from "./components/index";
+import { Header, Sidebar, Chat } from "./components/index";
 import styled from "styled-components";
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
           <AppBody>
             <Sidebar />
             <Switch>
-              <Route path="/" exact></Route>
+              <Route path="/" exact>
+                <Chat />
+              </Route>
             </Switch>
           </AppBody>
         </>
