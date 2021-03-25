@@ -23,7 +23,7 @@ function Sidebar() {
     <SidebarContainer>
       <SidebarHeader>
         <SidebarInfo>
-          <h2>YO MAMAS HQ</h2>
+          <h2>BOBBY'S HQ</h2>
           <h3>
             <FiberManualRecrodIcon />
             Bobby Reay
