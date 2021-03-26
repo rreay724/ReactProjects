@@ -7,6 +7,8 @@ function Login() {
   const signIn = (e) => {
     e.preventDefault();
     auth.signInWithPopup(provider).catch((error) => alert(error.message));
+
+    return false;
   };
 
   return (

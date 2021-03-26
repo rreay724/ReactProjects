@@ -14,6 +14,7 @@ function ChatInput({ channelName, channelId, chatRef }) {
 
   const sendMessage = (e) => {
     e.preventDefault(); // Prevents refresh
+
     if (!channelId) {
       return false;
     }
@@ -30,6 +31,8 @@ function ChatInput({ channelName, channelId, chatRef }) {
     });
 
     setInput("");
+
+    return false;
   };
 
   return (
