@@ -8,7 +8,7 @@ import {
   InputContainer,
   Input,
 } from "./chatScreen.styled";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
 import { Avatar, IconButton } from "@material-ui/core";
@@ -24,6 +24,7 @@ import getRecipientEmail from "../../utils/getRecipientEmail";
 import TimeAgo from "timeago-react";
 
 function ChatScreen({ chat, messages }) {
+  const endOfMessagesRef = useRef(null);
   const [user] = useAuthState(auth);
   const [input, setInput] = useState("");
   const router = useRouter();
@@ -40,6 +41,13 @@ function ChatScreen({ chat, messages }) {
       .collection("users")
       .where("email", "==", getRecipientEmail(chat.users, user))
   );
+
+  const scrollToBottom = () => {
+    endOfMessagesRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -59,6 +67,7 @@ function ChatScreen({ chat, messages }) {
     });
 
     setInput("");
+    scrollToBottom();
   };
 
   const showMessages = () => {
@@ -118,7 +127,7 @@ function ChatScreen({ chat, messages }) {
       </Header>
       <MessageContainer>
         {showMessages()}
-        <EndOfMessage />
+        <EndOfMessage ref={endOfMessagesRef} />
       </MessageContainer>
       <InputContainer>
         <InsertEmoticonIcon />
